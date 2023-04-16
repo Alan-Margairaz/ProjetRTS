@@ -1,5 +1,10 @@
 #include "init.hpp"
 #include "load_media.hpp"
+#include "NPC.hpp"
+#include "Farms.h"
+#include "GameController.h"
+#include "Soldiers.h"
+#include "Walls.h"
 
 #define TEXTURE_PATH "dot.png"
 
@@ -11,6 +16,10 @@ enum e_dir
 
 int main(int argc, char **argv)
 {
+	NPC Creation();
+	Creation();	
+	
+	
 	SDL_Window *window = NULL;
 	SDL_Renderer *renderer = NULL;
 	SDL_Event e;
