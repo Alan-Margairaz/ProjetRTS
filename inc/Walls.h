@@ -16,7 +16,7 @@ protected:
 	string _name;
 
 public: 
-	Walls();
+	Walls(int _hp, int _level, int _cost);
 	~Walls();
 	Walls(const Walls& src);
 	Walls& operator=(const Walls& rhs);

@@ -11,12 +11,12 @@ using namespace std;
 class Soldiers
 {
 protected:
-	int _hp, _moveDistance, _level, _damage;
+	int _hp, _moveDistance, _level, _damage, _cost;
 	vector<int> _placement;
 	string _name;
 
 public:
-	Soldiers(int _hp, int _moveDistance, int _level, int _damage);
+	Soldiers(int _hp, int _moveDistance, int _level, int _damage, int _cost);
 	~Soldiers();
 	Soldiers(const Soldiers& src);
 	Soldiers& operator=(const Soldiers& rhs);

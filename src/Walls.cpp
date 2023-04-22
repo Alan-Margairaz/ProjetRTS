@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-Walls::Walls()
+Walls::Walls(int _hp, int _level, int _cost)
 {
 
 }

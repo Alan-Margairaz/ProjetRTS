@@ -10,7 +10,7 @@ using namespace std;
 
 
 // Constructor, creation of the oject
-Soldiers::Soldiers(int _hp, int _moveDistance, int _level, int _damage)
+Soldiers::Soldiers(int _hp, int _moveDistance, int _level, int _damage, int _cost)
 {
 
 }
@@ -112,5 +112,6 @@ const int Soldiers::getLevel()
 {
 	return _level;
 }
+
 
 
