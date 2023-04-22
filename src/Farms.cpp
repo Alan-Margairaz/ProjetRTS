@@ -4,9 +4,16 @@
 
 using namespace std;
 
-Farms::Farms(int _hp, int _cost, int _addedIncome, int _currentIncome, Farms& _farms)
+Farms::Farms(int _hp, int _cost, int _addIncome, int _currentIncome, vector<int> _placedFarms, Farms& _farms)
 {
+	_farmsNumber++;
+	_placedFarms.push_back(1);
 
+	if (_farmsNumber++)
+	{
+		_farms.setIncome(_farms.getIncome() + 2);
+		cout << "Income increased by 3 gold." << endl;
+	}
 };
 
 Farms::~Farms()
@@ -58,7 +65,7 @@ const vector<int> Farms::getPlacement()
 // Income getter and setter:
 void Farms::setIncome(int new_addedIncome)
 {
-	_currentIncome = _currentIncome + new_addedIncome;
+	_currentIncome = new_addedIncome;
 }
 const int Farms::getIncome()
 {

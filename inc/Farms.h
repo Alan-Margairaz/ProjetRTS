@@ -11,12 +11,12 @@ using namespace std;
 class Farms
 {
 protected:
-	int _hp, _cost, _currentIncome, _addedIncome, _farmsNumber;
-	vector<int> _placement;
+	int _hp, _cost, _currentIncome, _addIncome, _farmsNumber;
+	vector<int> _placement, _placedFarms;
 	string _name;
 
 public:
-	Farms(int _hp, int _cost, int _addedIncome, int _currentIncome, Farms& _farms);
+	Farms(int _hp, int _cost, int _addedIncome, int _currentIncome, vector<int> _placedFarms, Farms& _farms);
 	~Farms();
 	Farms(const Farms& src);
 	Farms& operator=(const Farms& rhs);
