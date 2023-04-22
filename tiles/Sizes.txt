@@ -1,13 +1,7 @@
 Grass      : 96x96
 Tree       : 96x96
-
-de base : 48x48
-
 Castle     : 288x192
 Farm       : 96x96
-
-Knight     : 48x96
-
-
+Knight     : 96x192
 StoneWall  : 96x96
 WoodenWall : 96x96
