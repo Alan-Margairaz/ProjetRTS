@@ -6,8 +6,7 @@ using namespace std;
 
 ///		SOLDIER BASE CLASS 
 ///
-///		TODO : implement destroy(), pointers to ennemies & walls to apply damage, implement map movement
-///		TODO : implement child classes for soldiers lvl 1,2 & 3
+///		TODO : in Soldiers::upgrade() implement the keyboard key for upragde and money consumption
 
 
 // Constructor, creation of the oject
@@ -19,7 +18,8 @@ Soldiers::Soldiers(int _hp, int _moveDistance, int _level, int _damage)
 // Objects' destruction
 Soldiers::~Soldiers()		
 {
-
+	if (_hp <= 0)
+		return;
 }
 
 // Copy of the class
@@ -41,26 +41,37 @@ void Soldiers::move(int _moveDistance)
 }
 
 // Upgrade soldiers' rank
-void Soldiers::upgrade(int _level, int _moveDistance, int _hp, string _name)
+void Soldiers::upgrade(int _level, int _moveDistance, int _hp, Soldiers& _soldiers)
 {
-
+	switch (_level)		// Switch en fonction du level actuel du soldat pour améliorer ses caractéristiques
+	{
+	case 1: 
+		_level + 1;
+		_moveDistance + 1;
+		_hp + 10;
+		_soldiers.setName("SoldierLVL2");
+		cout << "Soldier successfully upgraded to LVL2 !" << endl;
+		break;
+	case 2:
+		_level + 1;
+		_moveDistance + 1;
+		_hp + 10;
+		_soldiers.setName("SoldierLVL3");
+		cout << "Soldier successfully upgraded to LVL3 !" << endl;
+		break;
+	default: 
+		cout << "Unit is at max level." << endl;
+		break;
+	}
 }
 
 // Condition check if killing the enemy is possible or not:
-void Soldiers::killEnemy(Soldiers& _soldiers, int _damage, int _level)
+void Soldiers::attackEnemy(Soldiers& _soldiers, int _damage, int _level)
 {
-	
-	_soldiers.setHP(_soldiers.getHP() - _damage);
-
-	if (_soldiers.getHP() <= 0)
-		_soldiers.destroy();
+	if(_level >= 2)
+		_soldiers.setHP(_soldiers.getHP() - _damage);
 }
 
-// Destruction method for the attacked ennemy:
-void Soldiers::destroy()
-{
-	
-}
 
 // HP setter & getter:
 void Soldiers::setHP(int new_hp)

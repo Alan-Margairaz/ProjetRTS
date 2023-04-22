@@ -22,9 +22,8 @@ public:
 	Soldiers& operator=(const Soldiers& rhs);
 
 	void move(int _moveDistance);
-	void upgrade(int _level, int _moveDistance, int _hp, string _name);
-	void killEnemy(Soldiers& _soldiers, int _damage, int _level);
-	void destroy();
+	void upgrade(int _level, int _moveDistance, int _hp, Soldiers& _soldiers);
+	void attackEnemy(Soldiers& _soldiers, int _damage, int _level);
 
 	void setHP(int new_hp);
 	const int getHP();
