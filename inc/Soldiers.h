@@ -33,4 +33,7 @@ public:
 
 	void setPlacement(vector<int> new_placement);
 	const vector<int> getPlacement();
+
+	void setLevel(int new_level);
+	const int getLevel();
 };

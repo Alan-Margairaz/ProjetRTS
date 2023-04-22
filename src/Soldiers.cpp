@@ -46,14 +46,14 @@ void Soldiers::upgrade(int _level, int _moveDistance, int _hp, Soldiers& _soldie
 	switch (_level)		// Switch en fonction du level actuel du soldat pour améliorer ses caractéristiques
 	{
 	case 1: 
-		_level + 1;
+		_soldiers.getLevel() + 1;
 		_moveDistance + 1;
 		_hp + 10;
 		_soldiers.setName("SoldierLVL2");
 		cout << "Soldier successfully upgraded to LVL2 !" << endl;
 		break;
 	case 2:
-		_level + 1;
+		_soldiers.getLevel() + 1;
 		_moveDistance + 1;
 		_hp + 10;
 		_soldiers.setName("SoldierLVL3");
@@ -101,6 +101,16 @@ void Soldiers::setPlacement(vector<int> new_placement)
 const vector<int> Soldiers::getPlacement()
 {
 	return _placement;
+}
+
+// Level getter and setter:
+void Soldiers::setLevel(int new_level)
+{
+	_level = new_level;
+}
+const int Soldiers::getLevel()
+{
+	return _level;
 }
 
 
