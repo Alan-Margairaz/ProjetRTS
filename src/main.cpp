@@ -1,25 +1,16 @@
 #include "init.hpp"
 #include "load_media.hpp"
-#include "NPC.hpp"
 #include "Farms.h"
 #include "GameController.h"
 #include "Soldiers.h"
 #include "Walls.h"
+#include "defs.h"
+#include "structs.h"
 
 #define TEXTURE_PATH "dot.png"
 
-enum e_dir
-{
-	RIGHT,
-	LEFT
-};
-
 int main(int argc, char **argv)
 {
-	NPC Creation();
-	Creation();	
-	
-	
 	SDL_Window *window = NULL;
 	SDL_Renderer *renderer = NULL;
 	SDL_Event e;
@@ -68,8 +59,10 @@ int main(int argc, char **argv)
 
 		// time : combien de temps s'est passe depuis le dernier mouvement en ms
 		time = SDL_GetTicks64() - clock;
+
 		// shift : la vitesse * ( time / 1 seconde ) -> C'est la distance parcourue, vitesse = distance / temps <=> distance = vitesse * temps
 		shift = (double)speed * ((double)time / 1000.0);
+
 		// On reset la clock pour le futur calcul de time
 		clock = SDL_GetTicks64();
 

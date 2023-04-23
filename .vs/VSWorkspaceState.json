@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\inc",
-    "\\src"
+    "\\src",
+    "\\tiles"
   ],
-  "SelectedNode": "\\inc\\Soldiers.h",
+  "SelectedNode": "\\inc\\Camera.h",
   "PreviewInSolutionExplorer": false
 }
