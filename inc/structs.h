@@ -4,7 +4,7 @@ struct Entity
 {
 	unsigned int id;
 	int type;							// Type of the entity
-	char name[MAX_NAME_LENGHT];
+	char name[MAX_NAME_LENGTH];
 	int x;								// x & y = entity location on the map
 	int y;								
 	int side;

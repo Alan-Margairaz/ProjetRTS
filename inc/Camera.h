@@ -15,4 +15,6 @@ protected:
 public:
 	Camera();
 	~Camera();
+
+	void constrainCamera();
 };
