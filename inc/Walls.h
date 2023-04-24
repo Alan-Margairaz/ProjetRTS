@@ -24,7 +24,7 @@ public:
 	void upgrade(int _level, int _hp, Walls& _walls);
 
 	void setHP(int new_hp);
-	const int getHP();
+	int getHP();
 
 	void setName(string new_name);
 	const string getName();
@@ -33,5 +33,5 @@ public:
 	const vector<int> getPlacement();
 
 	void setLevel(int new_level);
-	const int getLevel();
+	int getLevel();
 };

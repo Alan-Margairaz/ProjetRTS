@@ -26,7 +26,7 @@ public:
 	void attackEnemy(Soldiers& _soldiers, int _damage, int _level);
 
 	void setHP(int new_hp);
-	const int getHP();
+	int getHP();
 
 	void setName(string new_name);
 	const string getName();
@@ -35,5 +35,5 @@ public:
 	const vector<int> getPlacement();
 
 	void setLevel(int new_level);
-	const int getLevel();
+	int getLevel();
 };

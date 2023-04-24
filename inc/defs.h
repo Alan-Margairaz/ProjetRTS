@@ -1,11 +1,11 @@
 #pragma once
 
-#define MAP_TILE_SIZE			50
+#define MAP_TILE_SIZE			48
 
 #define MAX_TILES				15
 
-#define MAP_WIDTH				30
-#define MAP_HEIGHT				40
+#define MAP_WIDTH				15
+#define MAP_HEIGHT				15
 
 #define MAP_RENDER_WIDTH		15
 #define MAP_RENDER_HEIGHT		20
@@ -32,4 +32,10 @@ enum e_dir
 	RIGHT,
 	UP,
 	DOWN
+};
+
+enum TileType {
+  GRASS,
+  TREE,
+  STONE
 };

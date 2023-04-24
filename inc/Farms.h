@@ -22,7 +22,7 @@ public:
 	Farms& operator=(const Farms& rhs);
 
 	void setHP(int new_hp);
-	const int getHP();
+	int getHP();
 
 	void setName(string new_name);			
 	const string getName();		
@@ -31,8 +31,8 @@ public:
 	const vector<int> getPlacement();
 
 	void setIncome(int new_addedIncome);
-	const int getIncome();
+	int getIncome();
 
 	void setFarmsNumber(int new_farmNumber);
-	const int getFarmsNumber();
+	int getFarmsNumber();
 };
