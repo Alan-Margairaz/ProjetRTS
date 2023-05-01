@@ -7,6 +7,9 @@
 #define MAP_WIDTH				15
 #define MAP_HEIGHT				15
 
+#define PLAYER_WIDTH            48
+#define PLAYER_HEIGHT           96
+
 #define MAP_RENDER_WIDTH		15
 #define MAP_RENDER_HEIGHT		20
 
